@@ -2,7 +2,7 @@ class MapsController < ApplicationController
   def index
     @maps = Map.all.paginate(page: params[:page], per_page: 3)
     render json: {
-      posts: @maps,
+      maps: @maps,
       pagination: {
         total_pages: @maps.total_pages,
         current_page: @maps.current_page,
