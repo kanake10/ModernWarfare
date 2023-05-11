@@ -17,14 +17,6 @@ end
 
 gem 'graphql'
 
-group :development do
-  # A development utility to test GraphQL queries.
-  gem 'graphiql-rails'
-
-  # Seed data generator
-  gem 'faker'
-end
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
