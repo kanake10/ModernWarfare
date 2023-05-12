@@ -29,7 +29,7 @@ Endpoint for fetching maps
 ```yaml
 https://modern-warfare.onrender.com/maps
 ```
-This endpoint also supports pagingation using the `will_paginate` gem to query maps using the page parameter,it is also possible to query maps according to per_page parameter
+This endpoint also supports pagination using the `will_paginate` gem to query maps using the page parameter,it is also possible to query maps using the per_page parameter
 
 Example while using pagination `https://modern-warfare.onrender.com/maps?page=1`
 
