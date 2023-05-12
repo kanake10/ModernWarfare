@@ -1,24 +1,52 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a REST and Graphql API on Call of Duty Modern WarFare 2.The API is deployed on Render
 
-Things you may want to cover:
 
-* Ruby version
+`BASE_URL`  
+```yaml
+https://modern-warfare.onrender.com
+```
+Endpoint for fetching Vehicles.
 
-* System dependencies
+```yaml
+https://modern-warfare.onrender.com/vehicles
+```
+Endpoint to fetching operators.
 
-* Configuration
+```yaml
+https://modern-warfare.onrender.com/operators
+```
+Endpoint to fetching missions.
 
-* Database creation
+```yaml
+https://modern-warfare.onrender.com/missions
+```
+You can also pass an id to your missions url to fetch a specific mission
 
-* Database initialization
+Endpoint for fetching maps
 
-* How to run the test suite
+```yaml
+https://modern-warfare.onrender.com/maps
+```
+This endpoint also supports pagingation using the `will_paginate` gem to query maps using the page parameter,it is also possible to query maps according to per_page parameter
 
-* Services (job queues, cache servers, search engines, etc.)
+Example while using pagination `https://modern-warfare.onrender.com/maps?page=1`
 
-* Deployment instructions
+`GRAPH QL`
+The url to query and retrieve data is 
+```yaml
+https://modern-warfare.onrender.com/graphql
+```
 
-* ...
+Example of a query
+```yaml
+query {
+  guns {
+    name
+    image
+    description
+    real_life
+  }
+}
+```
