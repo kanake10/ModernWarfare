@@ -2,13 +2,14 @@ module Types
   class QueryType < Types::BaseObject
     include GraphQL::Types::Relay::HasNodeField
     include GraphQL::Types::Relay::HasNodesField
-    # Users
+    # Get all guns
     field :guns, [Types::GunType], null: false
     def guns
       Gun.all
     end
 
-    field :guns, Types::GunType, null: false do
+    # Get a specific gun
+    field :gun, Types::GunType, null: false do
       argument :id, ID, required: true
     end
     def gun(id:)
